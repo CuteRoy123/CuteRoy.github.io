@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>字符串基础刷题合集1 | 罗益的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="字符串专题（1）字符删除 题目描述 编写一个程序，先输入一个字符串str（长度不超过20），再输入单独的一个字符ch，然后程序会把字符串str当中出现的所有的ch字符都删掉，从而得到一个新的字符串str2，然后把这个字符串打印出来。  输入 输入有两行，第一行是一个字符串（内部没有空格），第二行是一个字符。  输出 经过处理以后的字符串。  样例输入 123-45-678 -  样例输出 1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串基础刷题合集1">
+<meta property="og:url" content="http://example.com/2021/08/19/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E5%88%B7%E9%A2%98%E5%90%88%E9%9B%861/index.html">
+<meta property="og:site_name" content="罗益的个人博客">
+<meta property="og:description" content="字符串专题（1）字符删除 题目描述 编写一个程序，先输入一个字符串str（长度不超过20），再输入单独的一个字符ch，然后程序会把字符串str当中出现的所有的ch字符都删掉，从而得到一个新的字符串str2，然后把这个字符串打印出来。  输入 输入有两行，第一行是一个字符串（内部没有空格），第二行是一个字符。  输出 经过处理以后的字符串。  样例输入 123-45-678 -  样例输出 1234">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-19T08:17:56.000Z">
+<meta property="article:modified_time" content="2021-08-19T08:34:46.280Z">
+<meta property="article:author" content="Yi Luo，China">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="罗益的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">罗益的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Welcome!</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-字符串基础刷题合集1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/08/19/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E5%88%B7%E9%A2%98%E5%90%88%E9%9B%861/" class="article-date">
+  <time class="dt-published" datetime="2021-08-19T08:17:56.000Z" itemprop="datePublished">2021-08-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      字符串基础刷题合集1
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>字符串专题（1）字符删除</p>
+<p><strong>题目描述</strong></p>
+<p>编写一个程序，先输入一个字符串str（长度不超过20），再输入单独的一个字符ch，然后程序会把字符串str当中出现的所有的ch字符都删掉，从而得到一个新的字符串str2，然后把这个字符串打印出来。 </p>
+<p><strong>输入</strong></p>
+<p>输入有两行，第一行是一个字符串（内部没有空格），第二行是一个字符。 </p>
+<p><strong>输出</strong></p>
+<p>经过处理以后的字符串。 </p>
+<p><strong>样例输入</strong></p>
+<p>123-45-678<br> - </p>
+<p><strong>样例输出</strong></p>
+<p>12345678 </p>
+<p>My code:</p>
+<span id="more"></span>
+
+<p>`#include<cstdio></p>
+<p>#include<iostream></p>
+<p>#include<cstring></p>
+<p>using namespace std;</p>
+<p>int main()</p>
+<p>{</p>
+<p>  int i,j=0;</p>
+<p>  char str[25];</p>
+<p>  char str2[25];</p>
+<p>  char c;</p>
+<p>  scanf(“%s”,str);</p>
+<p>  scanf(“\n%c”,&amp;c);</p>
+<p>//红色标注部分\n防止回车符的干扰 </p>
+<p>for(i=0;i&lt;strlen(str);i++)</p>
+<p>  {</p>
+<p>​    if(str[i]!=c)</p>
+<p>​    {</p>
+<p>​      str2[j]=str[i];</p>
+<p>​      j++;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  str2[j]=’\0’;</p>
+<p>  printf(“%s\n”,str2);</p>
+<p>  return 0;</p>
+<p>}`</p>
+<p>字符串专题（2）<strong>字符串分类统计</strong></p>
+<p><strong>题目描述</strong></p>
+<p>输入一行字符，分别统计出其中英文字母、数字、空格和其他字符的个数。</p>
+<p><strong>输入</strong></p>
+<p>一行字符,长度不超过200</p>
+<p><strong>输出</strong></p>
+<p>统计值</p>
+<p><strong>样例输入</strong></p>
+<p>aklsjflj123 sadf918u324 asdf91u32oasdf/.’;123</p>
+<p><strong>样例输出</strong></p>
+<p>23 16 2 4</p>
+<p>My code:</p>
+<p><code>#include&lt;cstdio&gt; #include&lt;iostream&gt; #include&lt;algorithm&gt; #include&lt;cstring&gt; using namespace std; int main() &#123;     char str[300];     gets(str);     int letter=0,number=0,space=0,other=0;     for(int i=0;i&lt;strlen(str);i++)     &#123;     if(str[i]&gt;=&#39;a&#39;&amp;&amp;str[i]&lt;=&#39;z&#39;||str[i]&gt;=&#39;A&#39;&amp;&amp;str[i]&lt;=&#39;Z&#39;)     &#123;         letter++;     &#125;     else if(str[i]&gt;=&#39;0&#39;&amp;&amp;str[i]&lt;=&#39;9&#39;)     &#123;         number++;     &#125;     else if(str[i]==&#39; &#39;)     &#123;         space++;     &#125;     else     other++;     &#125;     cout&lt;&lt;letter&lt;&lt;&quot; &quot;&lt;&lt;number&lt;&lt;&quot; &quot;&lt;&lt;space&lt;&lt;&quot; &quot;&lt;&lt;other&lt;&lt;endl;     return 0; &#125;</code></p>
+<p>字符串专题（3） 字符串颠倒</p>
+<p><strong>题目描述</strong></p>
+<p>字符串处理在计算机中有很多复杂的操作，但是这些复杂的操作都是由基本的字符串操作复合而成，要求编写一字符串颠倒的程序，把字符串中的字符颠倒位置。</p>
+<p><strong>输入</strong></p>
+<p>输入一字符串（&lt;255）</p>
+<p><strong>输出</strong></p>
+<p>按位进行颠倒的结果。</p>
+<p><strong>样例输入</strong></p>
+<p>COMPUTER</p>
+<p><strong>样例输出</strong></p>
+<p>RETUPMOC</p>
+<p>思路：定义一个新的字符串str2，将字符串str逆序输出，并用str2接受即可</p>
+<p>My code:</p>
+<p><code>#include&lt;iostream&gt; #include&lt;cstdio&gt; #include&lt;cstring&gt; using namespace std; int main() &#123;     char str[300];     char str2[300];     int j=0;     gets(str);     for(int i=strlen(str)-1;i&gt;=0;i--)     &#123;         str2[j++]=str[i];     &#125;     str2[j]=&#39;\0&#39;;     printf(&quot;%s&quot;,str2); &#125;</code></p>
+<p>字符串专题（4）自定义函数之字符串拷贝</p>
+<p><strong>题目描述</strong></p>
+<p>有一字符串，包含n个字符。写一函数，将此字符串中从第m个字符开始的全部字符复制成为另一个字符串。</p>
+<p><strong>输入</strong></p>
+<p>数字n 一行字符串 数字m</p>
+<p><strong>输出</strong></p>
+<p>从m开始的子串</p>
+<p><strong>样例输入</strong></p>
+<p>6<br> abcdef<br> 3</p>
+<p><strong>样例输出</strong></p>
+<p>cdef</p>
+<p>字符串专题（5）身份证号码升级</p>
+<p><strong>题目描述</strong></p>
+<p>从1999年10月1日开始，公民身份证号码由15位数字增至18位。(18位身份证号码简介)。升级方法为：</p>
+<p>1、把15位身份证号码中的年份由2位(7,8位)改为四位。</p>
+<p>2、最后添加一位验证码。验证码的计算方案：</p>
+<p>将前 17 位分别乘以对应系数 (7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2) 并相加，然后除以 11 取余数，0-10 分别对应 1 0 x 9 8 7 6 5 4 3 2。</p>
+<p>请编写一个程序，用户输入15位身份证号码，程序生成18位身份证号码。假设所有要升级的身份证的四位年份都是19××年</p>
+<p><strong>输入</strong></p>
+<p>一个15位的数字串，作为身份证号码</p>
+<p><strong>输出</strong></p>
+<p>一个18位的字符串，作为升级后的身份证号码</p>
+<p><strong>样例输入</strong></p>
+<p>110105491231002</p>
+<p><strong>样例输出</strong></p>
+<p>11010519491231002x</p>
+<p><strong>答案下期更新</strong></p>
+<p>coding的道路上不断前行</p>
+<p>Roy</p>
+<p>2021.8.19</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/08/19/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E5%88%B7%E9%A2%98%E5%90%88%E9%9B%861/" data-id="cksio4ii100002cu1e048gw9c" data-title="字符串基础刷题合集1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/08/16/%E8%BE%9B%E9%85%B8%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">辛酸博客搭建史</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">--博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 20px;">--博客搭建</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/08/19/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E5%88%B7%E9%A2%98%E5%90%88%E9%9B%861/">字符串基础刷题合集1</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/16/%E8%BE%9B%E9%85%B8%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%B2/">辛酸博客搭建史</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/12/The-first-blog-by-Roy/">The first blog by Roy</a>
+          </li>
+        
+          <li>
+            <a href="/2021/08/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Yi Luo，China<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
